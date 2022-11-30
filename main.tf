@@ -47,7 +47,7 @@ resource "azurerm_security_center_contact" "main" {
 resource "azurerm_security_center_setting" "main" {
   count        = var.enable_security_center_setting ? 1 : 0
   setting_name = var.security_center_setting_name
-  enabled      = var.enable_security_center_setting
+  enabled      = true
 }
 
 resource "azurerm_security_center_auto_provisioning" "main" {
